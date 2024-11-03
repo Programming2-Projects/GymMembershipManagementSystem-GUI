@@ -5,18 +5,34 @@ public class Class implements Recordable{
     private int duration, availableSeats;
 
     public Class(String classID, String className, String trainerID, int duration, int availableSeats) {
-//        if (!Validator.isValidID(classID, 'C'))
-//            throw new IllegalArgumentException("Invalid Class ID!");
-//        if (!Validator.isValidName(className))
-//            throw new IllegalArgumentException("Invalid class name!");
-//        if (!Validator.isValidID(trainerID, 'T'))
-//            throw new IllegalArgumentException("Invalid trainer ID!");
+        if (!Validator.isValidID(classID, 'C'))
+            throw new IllegalArgumentException("Invalid Class ID!");
+        if (!Validator.isValidName(className))
+            throw new IllegalArgumentException("Invalid class name!");
+        if (!Validator.isValidID(trainerID, 'T'))
+            throw new IllegalArgumentException("Invalid trainer ID!");
             
         this.classID = classID;
         this.className = className;
         this.trainerID = trainerID;
         this.duration = duration;
         this.availableSeats = availableSeats;
+    }
+
+    public String getClassID() {
+        return classID;
+    }
+
+    public String getClassName() {
+        return className;
+    }
+
+    public String getTrainerID() {
+        return trainerID;
+    }
+
+    public int getDuration() {
+        return duration;
     }
 
     public int getAvailableSeats () {
