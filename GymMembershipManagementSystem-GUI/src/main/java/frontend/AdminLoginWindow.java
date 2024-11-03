@@ -8,12 +8,12 @@ package frontend;
  *
  * @author ziade
  */
-public class AdminLogin extends javax.swing.JFrame {
+public class AdminLoginWindow extends javax.swing.JFrame {
 
     /**
      * Creates new form AdminLogin
      */
-    public AdminLogin() {
+    public AdminLoginWindow() {
         initComponents();
     }
 
@@ -36,12 +36,17 @@ public class AdminLogin extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Admin Login");
 
+        jPanel1.setBackground(new java.awt.Color(204, 204, 204));
+
         passwordTextInput.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 passwordTextInputActionPerformed(evt);
             }
         });
 
+        loginButton.setBackground(new java.awt.Color(0, 0, 0));
+        loginButton.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        loginButton.setForeground(new java.awt.Color(255, 255, 255));
         loginButton.setText("Login");
         loginButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -51,10 +56,12 @@ public class AdminLogin extends javax.swing.JFrame {
 
         PasswordLabel.setAlignment(java.awt.Label.CENTER);
         PasswordLabel.setBackground(new java.awt.Color(204, 255, 204));
+        PasswordLabel.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
         PasswordLabel.setText("Password");
 
         userNameLabel.setAlignment(java.awt.Label.CENTER);
         userNameLabel.setBackground(new java.awt.Color(204, 255, 204));
+        userNameLabel.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
         userNameLabel.setText("User Name");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
@@ -143,20 +150,21 @@ public class AdminLogin extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(AdminLogin.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(AdminLoginWindow.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(AdminLogin.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(AdminLoginWindow.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(AdminLogin.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(AdminLoginWindow.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(AdminLogin.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(AdminLoginWindow.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new AdminLogin().setVisible(true);
+                new AdminLoginWindow().setVisible(true);
             }
         });
     }
