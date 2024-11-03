@@ -1,13 +1,4 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package backend;
-
-/**
- *
- * @author Youssef
- */
 import java.time.*;
 
 public class MemberClassRegistration implements Recordable{
@@ -17,10 +8,10 @@ public class MemberClassRegistration implements Recordable{
     private LocalDate registrationDate;
 
     public MemberClassRegistration(String memberID, String classID) {
-//        if (!Validator.isValidID(memberID))
-//            throw new IllegalArgumentException("Invalid Member ID!");
-//        if (!Validator.isValidID(classID))
-//            throw new IllegalArgumentException("Invalid Class ID!");
+        if (!Validator.isValidID(memberID))
+            throw new IllegalArgumentException("Invalid Member ID!");
+        if (!Validator.isValidID(classID))
+            throw new IllegalArgumentException("Invalid Class ID!");
 
         this.memberID = memberID;
         this.classID = classID;
@@ -29,16 +20,18 @@ public class MemberClassRegistration implements Recordable{
     }
 
     public MemberClassRegistration(String memberID, String classID, String status, LocalDate registrationDate) {
-//        if (!Validator.isValidID(memberID))
-//            throw new IllegalArgumentException("Invalid Member ID!");
-//        if (!Validator.isValidID(classID))
-//            throw new IllegalArgumentException("Invalid Class ID!"); 
+        if (!Validator.isValidID(memberID))
+            throw new IllegalArgumentException("Invalid Member ID!");
+        if (!Validator.isValidID(classID))
+            throw new IllegalArgumentException("Invalid Class ID!"); 
         this.memberID = memberID;
         this.classID = classID;
         this.status = status;
         this.registrationDate = registrationDate;
     }
 
+    
+    
     public String getMemberID() {
         return memberID;
     }
@@ -56,6 +49,10 @@ public class MemberClassRegistration implements Recordable{
         return memberID + classID;
     }
 
+    public String getStatus () {
+        return this.status;
+    }
+    
     public void setStatus (String status) {
         this.status = status;
     }

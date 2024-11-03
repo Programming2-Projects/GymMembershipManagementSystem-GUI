@@ -1,13 +1,5 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package backend;
 
-/**
- *
- * @author Youssef
- */
 import java.time.LocalDate;
 import java.time.Period;
 import java.util.ArrayList;
@@ -18,9 +10,9 @@ public class TrainerRole {
     private MemberClassRegistrationDatabase registrationDatabase;
 
     public TrainerRole () {
-        this.memberDatabase = new MemberDatabase("Members.txt");
-        this.classDatabase = new ClassDatabase("Class.txt");
-        this.registrationDatabase = new MemberClassRegistrationDatabase("Registration.txt");
+        this.memberDatabase = new MemberDatabase("src/main/java/resources/Members.txt");
+        this.classDatabase = new ClassDatabase("src/main/java/resources/Class.txt");
+        this.registrationDatabase = new MemberClassRegistrationDatabase("src/main/java/resources/Registration.txt");
     }
 
     // Creates a new member object and inserts it into the MemberDatabase
@@ -66,6 +58,12 @@ public class TrainerRole {
         Class class_ = classDatabase.getRecord(classID);
         if (class_ == null) 
             return false;
+        
+        MemberClassRegistration registration = registrationDatabase.getRecord(memberID + classID);
+        if (registration != null && registration.getStatus().equalsIgnoreCase("canceled")) {
+            registration.setStatus("Active");
+            return true;
+        }
 
         // Check for available seats
         int seats = class_.getAvailableSeats();
@@ -73,7 +71,6 @@ public class TrainerRole {
             return false;
 
         // Create a new registration then add it to the database
-        MemberClassRegistration registration;
         try {
             registration = new MemberClassRegistration(memberID, classID, "Active", registrationDate);
         } catch (IllegalArgumentException e) {
@@ -95,6 +92,9 @@ public class TrainerRole {
 
         MemberClassRegistration registration = registrationDatabase.getRecord(memberID + classID);
         if (registration == null)
+            return false;
+        
+        if (registration.getStatus().equalsIgnoreCase("canceled"))
             return false;
 
         Class class_ = classDatabase.getRecord(classID);

@@ -1,27 +1,19 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package backend;
 
-/**
- *
- * @author Youssef
- */
 public class Member implements Recordable{
     private String name, email, memberId, phoneNumber;
     private String status;
     private String membershipType;
 
     public Member(String memberId, String name, String membershipType, String email, String phoneNumber, String status) {
-//         if (!Validator.isValidID(memberId, 'M'))
-//            throw new IllegalArgumentException("Invalid ID number!");
-//        if (!Validator.isValidName(name))
-//            throw new IllegalArgumentException("Invalid name!");
-//        if (!Validator.isValidEmail(email))
-//            throw new IllegalArgumentException("Invalid email address!");
-//        if (!Validator.isValidPhoneNumber(phoneNumber))
-//            throw new IllegalArgumentException("Invalid phone number!"); 
+         if (!Validator.isValidID(memberId, 'M'))
+            throw new IllegalArgumentException("Invalid ID number!");
+        if (!Validator.isValidName(name))
+            throw new IllegalArgumentException("Invalid name!");
+        if (!Validator.isValidEmail(email))
+            throw new IllegalArgumentException("Invalid email address!");
+        if (!Validator.isValidPhoneNumber(phoneNumber))
+            throw new IllegalArgumentException("Invalid phone number!"); 
 
         this.memberId = memberId;
         this.name = name;
@@ -30,6 +22,31 @@ public class Member implements Recordable{
         this.phoneNumber = phoneNumber;
         this.status = status;
     }
+
+    public String getName() {
+        return name;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public String getMemberId() {
+        return memberId;
+    }
+
+    public String getPhoneNumber() {
+        return phoneNumber;
+    }
+
+    public String getStatus() {
+        return status;
+    }
+
+    public String getMembershipType() {
+        return membershipType;
+    }
+    
 
     @Override
     public String lineRepresentation () {

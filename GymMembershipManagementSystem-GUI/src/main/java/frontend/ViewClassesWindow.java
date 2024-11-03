@@ -1,13 +1,11 @@
 package frontend;
 import backend.TrainerRole;
-import backend.MemberClassRegistration;
 import java.util.ArrayList;
 import javax.swing.table.DefaultTableModel;
 
-public class ViewRegistrationsWindow extends javax.swing.JDialog {
+public class ViewClassesWindow extends javax.swing.JDialog {
     TrainerRole trainer;
-
-    public ViewRegistrationsWindow(TrainerRole trainer) {
+    public ViewClassesWindow(TrainerRole trainer) {
         this.trainer = trainer;
         initComponents();
         setVisible(true);
@@ -15,13 +13,15 @@ public class ViewRegistrationsWindow extends javax.swing.JDialog {
     }
     
     private void displayTable () {
-        ArrayList<MemberClassRegistration> registrations = trainer.getListOfRegistrations();
+        ArrayList<backend.Class> classes = trainer.getListOfClasses();
         DefaultTableModel model = (DefaultTableModel) viewClassesTable.getModel();
-        for(MemberClassRegistration registration : registrations)
+        for(backend.Class c : classes)
             model.addRow(new Object[]{
-                registration.getMemberID(),
-                registration.getClassID(),
-                registration.getRegistrationDate()});
+                c.getClassID(),
+                c.getClassName(),
+                c.getTrainerID(),
+                c.getDuration(),
+                c.getAvailableSeats()});
     }
 
     @SuppressWarnings("unchecked")
@@ -32,8 +32,7 @@ public class ViewRegistrationsWindow extends javax.swing.JDialog {
         viewClassesTable = new javax.swing.JTable();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-        setTitle("View Registrations");
-        setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        setTitle("View Classes");
         setLocation(new java.awt.Point(500, 150));
 
         viewClassesTable.setModel(new javax.swing.table.DefaultTableModel(
@@ -41,11 +40,11 @@ public class ViewRegistrationsWindow extends javax.swing.JDialog {
 
             },
             new String [] {
-                "Member ID", "Class ID", "Registration Date"
+                "Class ID", "Class Name", "Trainer ID", "Duration", "Available Seats"
             }
         ) {
             Class[] types = new Class [] {
-                java.lang.String.class, java.lang.String.class, java.lang.Object.class
+                java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class
             };
 
             public Class getColumnClass(int columnIndex) {
@@ -61,11 +60,13 @@ public class ViewRegistrationsWindow extends javax.swing.JDialog {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 410, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 541, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 162, Short.MAX_VALUE)
+            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 191, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
         pack();
