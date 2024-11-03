@@ -52,15 +52,15 @@
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace min="-2" pref="42" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="1" max="-2" attributes="0">
-                              <Component id="classIDLabel" alignment="0" max="32767" attributes="0"/>
-                              <Component id="MemberIDLabel" max="32767" attributes="0"/>
-                              <Component id="registrationDateLabel" max="32767" attributes="0"/>
+                              <Component id="memberIDlabel" max="32767" attributes="0"/>
+                              <Component id="classIDlabel" max="32767" attributes="0"/>
+                              <Component id="registrationDatelabel" alignment="0" max="32767" attributes="0"/>
                           </Group>
                           <EmptySpace type="separate" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" max="-2" attributes="0">
                               <Component id="memberIDTextField" max="32767" attributes="0"/>
                               <Component id="classIDTextField" max="32767" attributes="0"/>
-                              <Component id="registrationDateTextField" min="-2" pref="122" max="-2" attributes="0"/>
+                              <Component id="registrationDateTextField" alignment="1" min="-2" pref="122" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                       <Group type="102" alignment="0" attributes="0">
@@ -78,19 +78,19 @@
                   <EmptySpace min="-2" pref="24" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" max="-2" attributes="0">
                       <Component id="memberIDTextField" pref="42" max="32767" attributes="0"/>
-                      <Component id="MemberIDLabel" max="32767" attributes="0"/>
+                      <Component id="memberIDlabel" max="32767" attributes="0"/>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="classIDLabel" pref="54" max="32767" attributes="0"/>
-                      <Component id="classIDTextField" min="-2" pref="42" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                      <Component id="classIDTextField" pref="42" max="32767" attributes="0"/>
+                      <Component id="classIDlabel" max="32767" attributes="0"/>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" max="-2" attributes="0">
                       <Component id="registrationDateTextField" pref="42" max="32767" attributes="0"/>
-                      <Component id="registrationDateLabel" max="32767" attributes="0"/>
+                      <Component id="registrationDatelabel" max="32767" attributes="0"/>
                   </Group>
-                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                  <EmptySpace pref="22" max="32767" attributes="0"/>
                   <Component id="registerMemberButton" min="-2" pref="51" max="-2" attributes="0"/>
                   <EmptySpace min="-2" pref="8" max="-2" attributes="0"/>
               </Group>
@@ -98,45 +98,9 @@
         </DimensionLayout>
       </Layout>
       <SubComponents>
-        <Component class="javax.swing.JLabel" name="MemberIDLabel">
-          <Properties>
-            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="33" green="cc" red="0" type="rgb"/>
-            </Property>
-            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Segoe UI" size="12" style="1"/>
-            </Property>
-            <Property name="horizontalAlignment" type="int" value="0"/>
-            <Property name="text" type="java.lang.String" value="Member ID"/>
-          </Properties>
-        </Component>
         <Component class="javax.swing.JTextField" name="memberIDTextField">
         </Component>
-        <Component class="javax.swing.JLabel" name="classIDLabel">
-          <Properties>
-            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="33" green="cc" red="0" type="rgb"/>
-            </Property>
-            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Segoe UI" size="12" style="1"/>
-            </Property>
-            <Property name="horizontalAlignment" type="int" value="0"/>
-            <Property name="text" type="java.lang.String" value="Class ID"/>
-          </Properties>
-        </Component>
         <Component class="javax.swing.JTextField" name="classIDTextField">
-        </Component>
-        <Component class="javax.swing.JLabel" name="registrationDateLabel">
-          <Properties>
-            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="33" green="cc" red="0" type="rgb"/>
-            </Property>
-            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Segoe UI" size="12" style="1"/>
-            </Property>
-            <Property name="horizontalAlignment" type="int" value="0"/>
-            <Property name="text" type="java.lang.String" value="Registration Date"/>
-          </Properties>
         </Component>
         <Component class="javax.swing.JTextField" name="registrationDateTextField">
         </Component>
@@ -156,6 +120,42 @@
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="registerMemberButtonActionPerformed"/>
           </Events>
+        </Component>
+        <Component class="java.awt.Label" name="memberIDlabel">
+          <Properties>
+            <Property name="alignment" type="int" value="1"/>
+            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="cc" green="ff" red="cc" type="rgb"/>
+            </Property>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Dialog" size="12" style="1"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="Member ID"/>
+          </Properties>
+        </Component>
+        <Component class="java.awt.Label" name="classIDlabel">
+          <Properties>
+            <Property name="alignment" type="int" value="1"/>
+            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="cc" green="ff" red="cc" type="rgb"/>
+            </Property>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Dialog" size="12" style="1"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="Class ID"/>
+          </Properties>
+        </Component>
+        <Component class="java.awt.Label" name="registrationDatelabel">
+          <Properties>
+            <Property name="alignment" type="int" value="1"/>
+            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="cc" green="ff" red="cc" type="rgb"/>
+            </Property>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Dialog" size="12" style="1"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="Registration Date"/>
+          </Properties>
         </Component>
       </SubComponents>
     </Container>

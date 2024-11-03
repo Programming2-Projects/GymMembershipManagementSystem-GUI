@@ -52,34 +52,19 @@ public class RegisterMemberForClassWindow extends javax.swing.JDialog {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        MemberIDLabel = new javax.swing.JLabel();
         memberIDTextField = new javax.swing.JTextField();
-        classIDLabel = new javax.swing.JLabel();
         classIDTextField = new javax.swing.JTextField();
-        registrationDateLabel = new javax.swing.JLabel();
         registrationDateTextField = new javax.swing.JTextField();
         registerMemberButton = new javax.swing.JButton();
+        memberIDlabel = new java.awt.Label();
+        classIDlabel = new java.awt.Label();
+        registrationDatelabel = new java.awt.Label();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Register Member");
         setLocation(new java.awt.Point(500, 150));
 
         jPanel1.setBackground(new java.awt.Color(204, 204, 204));
-
-        MemberIDLabel.setBackground(new java.awt.Color(0, 204, 51));
-        MemberIDLabel.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        MemberIDLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        MemberIDLabel.setText("Member ID");
-
-        classIDLabel.setBackground(new java.awt.Color(0, 204, 51));
-        classIDLabel.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        classIDLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        classIDLabel.setText("Class ID");
-
-        registrationDateLabel.setBackground(new java.awt.Color(0, 204, 51));
-        registrationDateLabel.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        registrationDateLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        registrationDateLabel.setText("Registration Date");
 
         registerMemberButton.setBackground(new java.awt.Color(0, 0, 0));
         registerMemberButton.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
@@ -91,6 +76,21 @@ public class RegisterMemberForClassWindow extends javax.swing.JDialog {
             }
         });
 
+        memberIDlabel.setAlignment(java.awt.Label.CENTER);
+        memberIDlabel.setBackground(new java.awt.Color(204, 255, 204));
+        memberIDlabel.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
+        memberIDlabel.setText("Member ID");
+
+        classIDlabel.setAlignment(java.awt.Label.CENTER);
+        classIDlabel.setBackground(new java.awt.Color(204, 255, 204));
+        classIDlabel.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
+        classIDlabel.setText("Class ID");
+
+        registrationDatelabel.setAlignment(java.awt.Label.CENTER);
+        registrationDatelabel.setBackground(new java.awt.Color(204, 255, 204));
+        registrationDatelabel.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
+        registrationDatelabel.setText("Registration Date");
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -100,14 +100,14 @@ public class RegisterMemberForClassWindow extends javax.swing.JDialog {
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(42, 42, 42)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                            .addComponent(classIDLabel, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(MemberIDLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(registrationDateLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addComponent(memberIDlabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(classIDlabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(registrationDatelabel, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                         .addGap(18, 18, 18)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(memberIDTextField)
                             .addComponent(classIDTextField)
-                            .addComponent(registrationDateTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(registrationDateTextField, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(52, 52, 52)
                         .addComponent(registerMemberButton, javax.swing.GroupLayout.PREFERRED_SIZE, 215, javax.swing.GroupLayout.PREFERRED_SIZE)))
@@ -119,16 +119,16 @@ public class RegisterMemberForClassWindow extends javax.swing.JDialog {
                 .addGap(24, 24, 24)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(memberIDTextField, javax.swing.GroupLayout.DEFAULT_SIZE, 42, Short.MAX_VALUE)
-                    .addComponent(MemberIDLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(memberIDlabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(classIDLabel, javax.swing.GroupLayout.DEFAULT_SIZE, 54, Short.MAX_VALUE)
-                    .addComponent(classIDTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(classIDTextField, javax.swing.GroupLayout.DEFAULT_SIZE, 42, Short.MAX_VALUE)
+                    .addComponent(classIDlabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(registrationDateTextField, javax.swing.GroupLayout.DEFAULT_SIZE, 42, Short.MAX_VALUE)
-                    .addComponent(registrationDateLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addGap(18, 18, 18)
+                    .addComponent(registrationDatelabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 22, Short.MAX_VALUE)
                 .addComponent(registerMemberButton, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(8, 8, 8))
         );
@@ -175,13 +175,13 @@ public class RegisterMemberForClassWindow extends javax.swing.JDialog {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel MemberIDLabel;
-    private javax.swing.JLabel classIDLabel;
     private javax.swing.JTextField classIDTextField;
+    private java.awt.Label classIDlabel;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JTextField memberIDTextField;
+    private java.awt.Label memberIDlabel;
     private javax.swing.JButton registerMemberButton;
-    private javax.swing.JLabel registrationDateLabel;
     private javax.swing.JTextField registrationDateTextField;
+    private java.awt.Label registrationDatelabel;
     // End of variables declaration//GEN-END:variables
 }

@@ -39,27 +39,17 @@ public class CancelRegistrationWindow extends javax.swing.JDialog {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        MemberIDLabel = new javax.swing.JLabel();
         memberIDTextField = new javax.swing.JTextField();
-        classIDLabel = new javax.swing.JLabel();
         classIDTextField = new javax.swing.JTextField();
         cancelMemberButton = new javax.swing.JButton();
+        memberIDlabel = new java.awt.Label();
+        classIDlabel = new java.awt.Label();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Cancel Registration");
         setLocation(new java.awt.Point(500, 150));
 
         jPanel1.setBackground(new java.awt.Color(204, 204, 204));
-
-        MemberIDLabel.setBackground(new java.awt.Color(0, 204, 51));
-        MemberIDLabel.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        MemberIDLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        MemberIDLabel.setText("Member ID");
-
-        classIDLabel.setBackground(new java.awt.Color(0, 204, 51));
-        classIDLabel.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        classIDLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        classIDLabel.setText("Class ID");
 
         cancelMemberButton.setBackground(new java.awt.Color(0, 0, 0));
         cancelMemberButton.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
@@ -71,39 +61,49 @@ public class CancelRegistrationWindow extends javax.swing.JDialog {
             }
         });
 
+        memberIDlabel.setAlignment(java.awt.Label.CENTER);
+        memberIDlabel.setBackground(new java.awt.Color(204, 255, 204));
+        memberIDlabel.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
+        memberIDlabel.setText("Member ID");
+
+        classIDlabel.setAlignment(java.awt.Label.CENTER);
+        classIDlabel.setBackground(new java.awt.Color(204, 255, 204));
+        classIDlabel.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
+        classIDlabel.setText("Class ID");
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(19, 19, 19)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                    .addComponent(MemberIDLabel, javax.swing.GroupLayout.DEFAULT_SIZE, 89, Short.MAX_VALUE)
-                    .addComponent(classIDLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addGap(31, 31, 31)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(memberIDTextField)
-                    .addComponent(classIDTextField))
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(memberIDlabel, javax.swing.GroupLayout.DEFAULT_SIZE, 89, Short.MAX_VALUE)
+                    .addComponent(classIDlabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 35, Short.MAX_VALUE)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(classIDTextField, javax.swing.GroupLayout.DEFAULT_SIZE, 136, Short.MAX_VALUE)
+                    .addComponent(memberIDTextField))
                 .addContainerGap())
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(32, 32, 32)
-                .addComponent(cancelMemberButton, javax.swing.GroupLayout.PREFERRED_SIZE, 215, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(38, Short.MAX_VALUE))
+                .addGap(37, 37, 37)
+                .addComponent(cancelMemberButton, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(23, 23, 23)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(MemberIDLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(memberIDTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(classIDLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(classIDTextField, javax.swing.GroupLayout.DEFAULT_SIZE, 42, Short.MAX_VALUE))
+                    .addComponent(memberIDTextField, javax.swing.GroupLayout.DEFAULT_SIZE, 42, Short.MAX_VALUE)
+                    .addComponent(memberIDlabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(18, 18, 18)
-                .addComponent(cancelMemberButton, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(12, Short.MAX_VALUE))
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(classIDTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(classIDlabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(18, 18, 18)
+                .addComponent(cancelMemberButton, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(20, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -139,11 +139,11 @@ public class CancelRegistrationWindow extends javax.swing.JDialog {
     }//GEN-LAST:event_cancelMemberButtonActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel MemberIDLabel;
     private javax.swing.JButton cancelMemberButton;
-    private javax.swing.JLabel classIDLabel;
     private javax.swing.JTextField classIDTextField;
+    private java.awt.Label classIDlabel;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JTextField memberIDTextField;
+    private java.awt.Label memberIDlabel;
     // End of variables declaration//GEN-END:variables
 }

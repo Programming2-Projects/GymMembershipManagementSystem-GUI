@@ -66,12 +66,6 @@ public class AddMemberWindow extends javax.swing.JDialog {
         idTextArea = new javax.swing.JTextArea();
         jMenuItem1 = new javax.swing.JMenuItem();
         jPanel2 = new javax.swing.JPanel();
-        emailLabel = new javax.swing.JLabel();
-        nameLabel = new javax.swing.JLabel();
-        idLabel = new javax.swing.JLabel();
-        statusLabel = new javax.swing.JLabel();
-        phoneNumberLabel = new javax.swing.JLabel();
-        membershipTypeLabel = new javax.swing.JLabel();
         addMemebrButton = new javax.swing.JButton();
         nameTextField = new javax.swing.JTextField();
         statusTextField = new javax.swing.JTextField();
@@ -79,6 +73,12 @@ public class AddMemberWindow extends javax.swing.JDialog {
         phoneNumberTextField = new javax.swing.JTextField();
         emailTextField = new javax.swing.JTextField();
         idTextField = new javax.swing.JTextField();
+        IDLabel = new java.awt.Label();
+        NameLabel = new java.awt.Label();
+        emailLabel = new java.awt.Label();
+        membershipTypeLabel = new java.awt.Label();
+        phoneNumberLabel = new java.awt.Label();
+        statusLabel = new java.awt.Label();
 
         idTextArea.setColumns(20);
         idTextArea.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
@@ -96,36 +96,6 @@ public class AddMemberWindow extends javax.swing.JDialog {
 
         jPanel2.setBackground(new java.awt.Color(204, 204, 204));
 
-        emailLabel.setBackground(new java.awt.Color(0, 204, 51));
-        emailLabel.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        emailLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        emailLabel.setText("Email");
-
-        nameLabel.setBackground(new java.awt.Color(0, 204, 51));
-        nameLabel.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        nameLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        nameLabel.setText("Name");
-
-        idLabel.setBackground(new java.awt.Color(153, 255, 153));
-        idLabel.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        idLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        idLabel.setText("ID");
-
-        statusLabel.setBackground(new java.awt.Color(0, 204, 51));
-        statusLabel.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        statusLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        statusLabel.setText("Status");
-
-        phoneNumberLabel.setBackground(new java.awt.Color(0, 204, 51));
-        phoneNumberLabel.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        phoneNumberLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        phoneNumberLabel.setText("Phone Number");
-
-        membershipTypeLabel.setBackground(new java.awt.Color(0, 204, 51));
-        membershipTypeLabel.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        membershipTypeLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        membershipTypeLabel.setText("Membership Type");
-
         addMemebrButton.setBackground(new java.awt.Color(0, 0, 0));
         addMemebrButton.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         addMemebrButton.setForeground(new java.awt.Color(255, 255, 255));
@@ -136,6 +106,36 @@ public class AddMemberWindow extends javax.swing.JDialog {
             }
         });
 
+        IDLabel.setAlignment(java.awt.Label.CENTER);
+        IDLabel.setBackground(new java.awt.Color(204, 255, 204));
+        IDLabel.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
+        IDLabel.setText("ID");
+
+        NameLabel.setAlignment(java.awt.Label.CENTER);
+        NameLabel.setBackground(new java.awt.Color(204, 255, 204));
+        NameLabel.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
+        NameLabel.setText("Name");
+
+        emailLabel.setAlignment(java.awt.Label.CENTER);
+        emailLabel.setBackground(new java.awt.Color(204, 255, 204));
+        emailLabel.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
+        emailLabel.setText("Email");
+
+        membershipTypeLabel.setAlignment(java.awt.Label.CENTER);
+        membershipTypeLabel.setBackground(new java.awt.Color(204, 255, 204));
+        membershipTypeLabel.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
+        membershipTypeLabel.setText("Membership Type");
+
+        phoneNumberLabel.setAlignment(java.awt.Label.CENTER);
+        phoneNumberLabel.setBackground(new java.awt.Color(204, 255, 204));
+        phoneNumberLabel.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
+        phoneNumberLabel.setText("Phone Number");
+
+        statusLabel.setAlignment(java.awt.Label.CENTER);
+        statusLabel.setBackground(new java.awt.Color(204, 255, 204));
+        statusLabel.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
+        statusLabel.setText("Status");
+
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
@@ -143,12 +143,12 @@ public class AddMemberWindow extends javax.swing.JDialog {
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addGap(17, 17, 17)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(membershipTypeLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(IDLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(NameLabel, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(emailLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(nameLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(idLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(membershipTypeLabel, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(phoneNumberLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(statusLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(statusLabel, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(30, 30, 30)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(statusTextField, javax.swing.GroupLayout.DEFAULT_SIZE, 186, Short.MAX_VALUE)
@@ -168,29 +168,29 @@ public class AddMemberWindow extends javax.swing.JDialog {
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addGap(20, 20, 20)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(idLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(idTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(nameLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(nameTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(idTextField, javax.swing.GroupLayout.DEFAULT_SIZE, 42, Short.MAX_VALUE)
+                    .addComponent(IDLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(emailLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(emailTextField))
+                    .addComponent(nameTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(NameLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(membershipTypeLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(membershipTypeTextField))
+                    .addComponent(emailTextField, javax.swing.GroupLayout.DEFAULT_SIZE, 40, Short.MAX_VALUE)
+                    .addComponent(emailLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(phoneNumberLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(phoneNumberTextField))
+                    .addComponent(membershipTypeTextField, javax.swing.GroupLayout.DEFAULT_SIZE, 40, Short.MAX_VALUE)
+                    .addComponent(membershipTypeLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(statusLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(statusTextField))
-                .addGap(18, 18, 18)
+                    .addComponent(phoneNumberTextField, javax.swing.GroupLayout.DEFAULT_SIZE, 41, Short.MAX_VALUE)
+                    .addComponent(phoneNumberLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(statusTextField, javax.swing.GroupLayout.DEFAULT_SIZE, 43, Short.MAX_VALUE)
+                    .addComponent(statusLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(addMemebrButton, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
@@ -234,22 +234,22 @@ public class AddMemberWindow extends javax.swing.JDialog {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private java.awt.Label IDLabel;
+    private java.awt.Label NameLabel;
     private javax.swing.JButton addMemebrButton;
-    private javax.swing.JLabel emailLabel;
+    private java.awt.Label emailLabel;
     private javax.swing.JTextField emailTextField;
-    private javax.swing.JLabel idLabel;
     private javax.swing.JTextArea idTextArea;
     private javax.swing.JTextField idTextField;
     private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JScrollPane jScrollPane3;
-    private javax.swing.JLabel membershipTypeLabel;
+    private java.awt.Label membershipTypeLabel;
     private javax.swing.JTextField membershipTypeTextField;
-    private javax.swing.JLabel nameLabel;
     private javax.swing.JTextField nameTextField;
-    private javax.swing.JLabel phoneNumberLabel;
+    private java.awt.Label phoneNumberLabel;
     private javax.swing.JTextField phoneNumberTextField;
-    private javax.swing.JLabel statusLabel;
+    private java.awt.Label statusLabel;
     private javax.swing.JTextField statusTextField;
     // End of variables declaration//GEN-END:variables
 }

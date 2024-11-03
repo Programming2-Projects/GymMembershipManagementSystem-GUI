@@ -61,48 +61,23 @@ public class AddClassWindow extends javax.swing.JDialog {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        classIDLabel = new javax.swing.JLabel();
-        classNameLabel = new javax.swing.JLabel();
-        trainerIDLabel = new javax.swing.JLabel();
-        durationLabel = new javax.swing.JLabel();
         classIDTextField = new javax.swing.JTextField();
         classNameTextField = new javax.swing.JTextField();
         trainerIDTextField = new javax.swing.JTextField();
         durationTextField = new javax.swing.JTextField();
-        maxPartipantsLabel = new javax.swing.JLabel();
-        maxParicipantsTextField = new javax.swing.JTextField();
+        maxParticipantsTextField = new javax.swing.JTextField();
         addClassButton = new javax.swing.JButton();
+        ClassIDLabel = new java.awt.Label();
+        ClassNameLabel = new java.awt.Label();
+        TrainerIDLabel = new java.awt.Label();
+        DurationLabel = new java.awt.Label();
+        MaxParticipantsLabel = new java.awt.Label();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Add Class");
         setLocation(new java.awt.Point(500, 150));
 
         jPanel1.setBackground(new java.awt.Color(204, 204, 204));
-
-        classIDLabel.setBackground(new java.awt.Color(0, 204, 51));
-        classIDLabel.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        classIDLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        classIDLabel.setText("Class ID");
-
-        classNameLabel.setBackground(new java.awt.Color(0, 204, 51));
-        classNameLabel.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        classNameLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        classNameLabel.setText("Class Name");
-
-        trainerIDLabel.setBackground(new java.awt.Color(0, 204, 51));
-        trainerIDLabel.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        trainerIDLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        trainerIDLabel.setText("Trainer ID");
-
-        durationLabel.setBackground(new java.awt.Color(0, 204, 51));
-        durationLabel.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        durationLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        durationLabel.setText("Duration");
-
-        maxPartipantsLabel.setBackground(new java.awt.Color(0, 204, 51));
-        maxPartipantsLabel.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        maxPartipantsLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        maxPartipantsLabel.setText("Max. Participants");
 
         addClassButton.setBackground(new java.awt.Color(0, 0, 0));
         addClassButton.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
@@ -114,25 +89,50 @@ public class AddClassWindow extends javax.swing.JDialog {
             }
         });
 
+        ClassIDLabel.setAlignment(java.awt.Label.CENTER);
+        ClassIDLabel.setBackground(new java.awt.Color(204, 255, 204));
+        ClassIDLabel.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
+        ClassIDLabel.setText("Class ID");
+
+        ClassNameLabel.setAlignment(java.awt.Label.CENTER);
+        ClassNameLabel.setBackground(new java.awt.Color(204, 255, 204));
+        ClassNameLabel.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
+        ClassNameLabel.setText("Class Name");
+
+        TrainerIDLabel.setAlignment(java.awt.Label.CENTER);
+        TrainerIDLabel.setBackground(new java.awt.Color(204, 255, 204));
+        TrainerIDLabel.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
+        TrainerIDLabel.setText("Trainer ID");
+
+        DurationLabel.setAlignment(java.awt.Label.CENTER);
+        DurationLabel.setBackground(new java.awt.Color(204, 255, 204));
+        DurationLabel.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
+        DurationLabel.setText("Duration");
+
+        MaxParticipantsLabel.setAlignment(java.awt.Label.CENTER);
+        MaxParticipantsLabel.setBackground(new java.awt.Color(204, 255, 204));
+        MaxParticipantsLabel.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
+        MaxParticipantsLabel.setText("Max. Participants");
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap(41, Short.MAX_VALUE)
+                .addContainerGap(37, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(durationLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(trainerIDLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(classNameLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(classIDLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(maxPartipantsLabel))
+                    .addComponent(ClassIDLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(ClassNameLabel, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(TrainerIDLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(DurationLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(MaxParticipantsLabel, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(30, 30, 30)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(classIDTextField)
                     .addComponent(classNameTextField)
                     .addComponent(trainerIDTextField)
                     .addComponent(durationTextField)
-                    .addComponent(maxParicipantsTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 151, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(maxParticipantsTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 151, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(36, 36, 36))
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(67, 67, 67)
@@ -142,26 +142,28 @@ public class AddClassWindow extends javax.swing.JDialog {
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(classIDLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(classIDTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap()
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addComponent(classIDTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(ClassIDLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(classNameLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(classNameTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(classNameTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(ClassNameLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(trainerIDLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(trainerIDTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(trainerIDTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(TrainerIDLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(durationLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(durationTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(durationTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(DurationLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(maxPartipantsLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(maxParicipantsTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(maxParticipantsTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(MaxParticipantsLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(addClassButton, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(23, 23, 23))
@@ -186,7 +188,7 @@ public class AddClassWindow extends javax.swing.JDialog {
         String className = classNameTextField.getText();
         String trainerID = trainerIDTextField.getText();
         String duration = durationTextField.getText();
-        String maxParticipants = maxParicipantsTextField.getText();
+        String maxParticipants = maxParticipantsTextField.getText();
         
         boolean  flag = validateClass(classID, className, trainerID, duration, maxParticipants);
         if(!flag)
@@ -204,17 +206,17 @@ public class AddClassWindow extends javax.swing.JDialog {
 
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private java.awt.Label ClassIDLabel;
+    private java.awt.Label ClassNameLabel;
+    private java.awt.Label DurationLabel;
+    private java.awt.Label MaxParticipantsLabel;
+    private java.awt.Label TrainerIDLabel;
     private javax.swing.JButton addClassButton;
-    private javax.swing.JLabel classIDLabel;
     private javax.swing.JTextField classIDTextField;
-    private javax.swing.JLabel classNameLabel;
     private javax.swing.JTextField classNameTextField;
-    private javax.swing.JLabel durationLabel;
     private javax.swing.JTextField durationTextField;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JTextField maxParicipantsTextField;
-    private javax.swing.JLabel maxPartipantsLabel;
-    private javax.swing.JLabel trainerIDLabel;
+    private javax.swing.JTextField maxParticipantsTextField;
     private javax.swing.JTextField trainerIDTextField;
     // End of variables declaration//GEN-END:variables
 }
