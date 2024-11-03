@@ -27,7 +27,7 @@ public class Main {
         }
         //</editor-fold>
 
-        TrainerRoleWindow trainerRoleWindow = new TrainerRoleWindow();
-    }
+            MainWindow mainWindow = new MainWindow();
+        }
     
 }

@@ -40,6 +40,26 @@ private String phoneNumber;
         return line;
     }
 
+    public String getTrainerId() {
+        return trainerId;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public String getSpeciality() {
+        return speciality;
+    }
+
+    public String getPhoneNumber() {
+        return phoneNumber;
+    }
+
     @Override
     public String getSearchKey () {
         return trainerId;
