@@ -1,13 +1,34 @@
 package frontend;
 import backend.TrainerRole;
+import java.awt.event.*;
+import javax.swing.*;
 
 public class TrainerRoleWindow extends javax.swing.JFrame {
     TrainerRole trainer;
-
-    public TrainerRoleWindow() {
+    MainWindow parent;
+    public TrainerRoleWindow(MainWindow parent) {
+        this.parent = parent;
         initComponents();
         trainer = new TrainerRole();
+        setLocationRelativeTo(null);
+        setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
         setVisible(true);
+        
+        addWindowListener(new WindowAdapter() {
+            @Override
+            public void windowClosing(WindowEvent e) {
+                int confirm = JOptionPane.showConfirmDialog(
+                        TrainerRoleWindow.this,
+                        "Are you sure you want to exit? Changes Won't be saved.",
+                        "Exit Confirmation",
+                        JOptionPane.YES_NO_OPTION
+                );
+                if (confirm == JOptionPane.YES_OPTION) {
+                    parent.setVisible(true);
+                    dispose();
+                }
+            }
+        });
     }
 
     @SuppressWarnings("unchecked")
@@ -227,6 +248,7 @@ public class TrainerRoleWindow extends javax.swing.JFrame {
 
     private void logoutButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_logoutButtonActionPerformed
         trainer.logout();
+        parent.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_logoutButtonActionPerformed
 

@@ -3,13 +3,15 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package frontend;
-
+import javax.swing.JFrame;
 
 public class MainWindow extends javax.swing.JFrame {
 
   
     public MainWindow() {
+        this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         initComponents();
+        setLocationRelativeTo(null);
         setVisible(true);
     }
 
@@ -89,13 +91,15 @@ public class MainWindow extends javax.swing.JFrame {
 
     private void adminRoleButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_adminRoleButtonActionPerformed
         // TODO add your handling code here:
-        new AdminRoleWindow();
+        setVisible(false);
+        new AdminLoginWindow(this);
           
     }//GEN-LAST:event_adminRoleButtonActionPerformed
 
     private void trainerRoleButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_trainerRoleButtonActionPerformed
         // TODO add your handling code here:
-        new TrainerRoleWindow();
+        setVisible(false);
+        new TrainerLoginWindow(this);
     }//GEN-LAST:event_trainerRoleButtonActionPerformed
 
     /**

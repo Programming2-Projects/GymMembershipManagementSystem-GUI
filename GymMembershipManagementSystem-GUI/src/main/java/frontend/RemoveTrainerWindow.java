@@ -14,6 +14,7 @@ public class RemoveTrainerWindow extends javax.swing.JFrame {
     public RemoveTrainerWindow(AdminRole admin) {
         this.admin = admin;
         initComponents();
+        setLocationRelativeTo(null);
         setVisible(true);
     }
 
@@ -26,7 +27,7 @@ public class RemoveTrainerWindow extends javax.swing.JFrame {
         TrainerIDTextField = new java.awt.TextField();
         RemoveButton = new javax.swing.JButton();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Remove Trainer");
 
         jPanel1.setBackground(new java.awt.Color(204, 204, 204));
@@ -56,7 +57,7 @@ public class RemoveTrainerWindow extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(TrainerIDTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 179, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(RemoveButton, javax.swing.GroupLayout.DEFAULT_SIZE, 110, Short.MAX_VALUE)
+                .addComponent(RemoveButton, javax.swing.GroupLayout.DEFAULT_SIZE, 129, Short.MAX_VALUE)
                 .addContainerGap())
         );
         jPanel1Layout.setVerticalGroup(
@@ -74,7 +75,7 @@ public class RemoveTrainerWindow extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -98,6 +99,7 @@ public class RemoveTrainerWindow extends javax.swing.JFrame {
         }
         else
             JOptionPane.showMessageDialog(null, "The trainer with ID = " + trainerID + " does not exist!", "Error", JOptionPane.ERROR_MESSAGE);
+        this.dispose();
     }//GEN-LAST:event_RemoveButtonActionPerformed
 
  

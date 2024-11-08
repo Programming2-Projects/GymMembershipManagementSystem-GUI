@@ -10,6 +10,7 @@ public class ViewMembersWindow extends javax.swing.JDialog {
     public ViewMembersWindow(TrainerRole trainer) {
         this.trainer = trainer;
         initComponents();
+        setLocationRelativeTo(null);
         setVisible(true);
         displayTable();
     }

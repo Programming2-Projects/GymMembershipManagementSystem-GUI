@@ -1,18 +1,19 @@
 package backend;
 
+import constants.FileNames;
 import java.time.LocalDate;
 import java.time.Period;
 import java.util.ArrayList;
 
-public class TrainerRole {
-    private MemberDatabase memberDatabase;
-    private ClassDatabase classDatabase;
-    private MemberClassRegistrationDatabase registrationDatabase;
+public class TrainerRole implements FileNames{
+    private final MemberDatabase memberDatabase;
+    private final ClassDatabase classDatabase;
+    private final MemberClassRegistrationDatabase registrationDatabase;
 
     public TrainerRole () {
-        this.memberDatabase = new MemberDatabase("src/main/java/resources/Members.txt");
-        this.classDatabase = new ClassDatabase("src/main/java/resources/Class.txt");
-        this.registrationDatabase = new MemberClassRegistrationDatabase("src/main/java/resources/Registration.txt");
+        this.memberDatabase = new MemberDatabase(MEMBER_FILENAME);
+        this.classDatabase = new ClassDatabase(CLASS_FILENAME);
+        this.registrationDatabase = new MemberClassRegistrationDatabase(REGISTRATION_FILENAME);
     }
 
     // Creates a new member object and inserts it into the MemberDatabase
@@ -62,6 +63,7 @@ public class TrainerRole {
         MemberClassRegistration registration = registrationDatabase.getRecord(memberID + classID);
         if (registration != null && registration.getStatus().equalsIgnoreCase("canceled")) {
             registration.setStatus("Active");
+            registration.setRegistrationDate(registrationDate);
             return true;
         }
 

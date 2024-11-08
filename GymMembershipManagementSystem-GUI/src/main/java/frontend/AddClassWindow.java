@@ -9,6 +9,7 @@ public class AddClassWindow extends javax.swing.JDialog {
     public AddClassWindow(TrainerRole trainer) {
         this.trainer = trainer;
         initComponents();
+        setLocationRelativeTo(null);
         setVisible(true);
     }
     

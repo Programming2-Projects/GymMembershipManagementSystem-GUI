@@ -10,6 +10,7 @@ public class ViewRegistrationsWindow extends javax.swing.JDialog {
     public ViewRegistrationsWindow(TrainerRole trainer) {
         this.trainer = trainer;
         initComponents();
+        setLocationRelativeTo(null);
         setVisible(true);
         displayTable();
     }

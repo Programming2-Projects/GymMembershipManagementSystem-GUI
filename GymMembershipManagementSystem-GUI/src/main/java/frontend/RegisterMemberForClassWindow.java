@@ -11,6 +11,7 @@ public class RegisterMemberForClassWindow extends javax.swing.JDialog {
     public RegisterMemberForClassWindow(TrainerRole trainer) {
         this.trainer = trainer;
         initComponents();
+        setLocationRelativeTo(null);
         setVisible(true);
     }
     
@@ -169,7 +170,7 @@ public class RegisterMemberForClassWindow extends javax.swing.JDialog {
             this.dispose();
         }
         else
-            JOptionPane.showMessageDialog(null, "The Class has no available seats", "Error", JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(null, "Error in registering!! Registration Failed.", "Error", JOptionPane.ERROR_MESSAGE);
      
     }//GEN-LAST:event_registerMemberButtonActionPerformed
 

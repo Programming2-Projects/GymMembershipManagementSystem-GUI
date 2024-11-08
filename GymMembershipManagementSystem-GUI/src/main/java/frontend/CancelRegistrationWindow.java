@@ -9,6 +9,7 @@ public class CancelRegistrationWindow extends javax.swing.JDialog {
     public CancelRegistrationWindow(TrainerRole trainer) {
         this.trainer = trainer;
         initComponents();
+        setLocationRelativeTo(null);
         setVisible(true);
     }
     

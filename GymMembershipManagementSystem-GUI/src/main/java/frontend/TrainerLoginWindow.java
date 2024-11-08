@@ -3,20 +3,17 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package frontend;
-
-import constants.LoginCredentials;
+import constants.*;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 import javax.swing.JOptionPane;
 
-
-public class AdminLoginWindow extends javax.swing.JFrame implements LoginCredentials{
+public class TrainerLoginWindow extends javax.swing.JFrame implements LoginCredentials{
     MainWindow parent;
-    
-    public AdminLoginWindow(MainWindow parent) {
+    public TrainerLoginWindow(MainWindow parent) {
         this.parent = parent;
-        initComponents();
-        setLocationRelativeTo(null);
+       initComponents();
+       setLocationRelativeTo(null);
         setVisible(true);
         
         addWindowListener(new WindowAdapter() {
@@ -28,6 +25,7 @@ public class AdminLoginWindow extends javax.swing.JFrame implements LoginCredent
         });
     }
 
+    
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
@@ -40,7 +38,7 @@ public class AdminLoginWindow extends javax.swing.JFrame implements LoginCredent
         userNameLabel = new java.awt.Label();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-        setTitle("Admin Login");
+        setTitle("Trainer Login");
 
         jPanel1.setBackground(new java.awt.Color(204, 204, 204));
 
@@ -85,7 +83,7 @@ public class AdminLoginWindow extends javax.swing.JFrame implements LoginCredent
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(124, 124, 124)
                 .addComponent(loginButton, javax.swing.GroupLayout.PREFERRED_SIZE, 158, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(130, Short.MAX_VALUE))
+                .addContainerGap(142, Short.MAX_VALUE))
             .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel1Layout.createSequentialGroup()
                     .addGap(40, 40, 40)
@@ -101,47 +99,44 @@ public class AdminLoginWindow extends javax.swing.JFrame implements LoginCredent
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(passwordTextInput, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(PasswordLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 59, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 65, Short.MAX_VALUE)
                 .addComponent(loginButton, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(46, 46, 46))
             .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel1Layout.createSequentialGroup()
                     .addGap(49, 49, 49)
                     .addComponent(userNameLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(235, Short.MAX_VALUE)))
+                    .addContainerGap(241, Short.MAX_VALUE)))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap())
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void passwordTextInputActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_passwordTextInputActionPerformed
+        // TODO add your handling code here:
         
     }//GEN-LAST:event_passwordTextInputActionPerformed
 
     private void loginButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_loginButtonActionPerformed
-         String username = userNameTextInput.getText();
+        // TODO add your handling code here:
+        String username = userNameTextInput.getText();
         String password = passwordTextInput.getText();
-        if (username.equals(ADMIN_USERNAME) && password.equals(ADMIN_PASSWORD)){
+        if (username.equals(TRAINER_USERNAME) && password.equals(TRAINER_PASSWORD)){
             this.dispose();
-            new AdminRoleWindow(parent);
+            new TrainerRoleWindow(parent);
         }
-        else  JOptionPane.showMessageDialog(null, "Wrong username or password", "Error", JOptionPane.ERROR_MESSAGE);
+        else             JOptionPane.showMessageDialog(null, "Wrong username or password", "Error", JOptionPane.ERROR_MESSAGE);
     }//GEN-LAST:event_loginButtonActionPerformed
 
 

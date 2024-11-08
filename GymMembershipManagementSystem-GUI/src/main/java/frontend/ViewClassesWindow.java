@@ -8,6 +8,7 @@ public class ViewClassesWindow extends javax.swing.JDialog {
     public ViewClassesWindow(TrainerRole trainer) {
         this.trainer = trainer;
         initComponents();
+        setLocationRelativeTo(null);
         setVisible(true);
         displayTable();
     }

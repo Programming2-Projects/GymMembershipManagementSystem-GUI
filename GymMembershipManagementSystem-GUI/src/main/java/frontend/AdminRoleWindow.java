@@ -4,14 +4,36 @@
  */
 package frontend;
 import backend.*;
+import java.awt.event.*;
+import javax.swing.*;
 
 public class AdminRoleWindow extends javax.swing.JFrame {
     AdminRole admin; 
+    MainWindow parent;
     
-    public AdminRoleWindow() {
+    public AdminRoleWindow(MainWindow parent) {
+        this.parent = parent;
         initComponents();
         admin = new AdminRole();
+        setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
+        setLocationRelativeTo(null);
         setVisible(true);
+        
+         addWindowListener(new WindowAdapter() {
+            @Override
+            public void windowClosing(WindowEvent e) {
+                int confirm = JOptionPane.showConfirmDialog(
+                        AdminRoleWindow.this,
+                        "Are you sure you want to exit? Changes Won't be saved.",
+                        "Exit Confirmation",
+                        JOptionPane.YES_NO_OPTION
+                );
+                if (confirm == JOptionPane.YES_OPTION) { 
+                    parent.setVisible(true);
+                    dispose();
+                }
+            }
+        });
     }
 
    
@@ -135,6 +157,7 @@ public class AdminRoleWindow extends javax.swing.JFrame {
     private void LogOutButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LogOutButtonActionPerformed
         // TODO add your handling code here:
         admin.logout();
+        parent.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_LogOutButtonActionPerformed
 

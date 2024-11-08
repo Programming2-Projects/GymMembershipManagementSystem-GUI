@@ -40,6 +40,11 @@ public class MemberClassRegistration implements Recordable{
         return classID;
     }
 
+    public void setRegistrationDate(LocalDate registrationDate) {
+        this.registrationDate = registrationDate;
+    }
+    
+    
     public LocalDate getRegistrationDate() {
         return registrationDate;
     }

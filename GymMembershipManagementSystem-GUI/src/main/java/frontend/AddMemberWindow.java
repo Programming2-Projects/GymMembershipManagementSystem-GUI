@@ -8,6 +8,7 @@ public class AddMemberWindow extends javax.swing.JDialog {
     public AddMemberWindow(TrainerRole trainer) {
         this.trainer = trainer;
         initComponents();
+        setLocationRelativeTo(null);
         setVisible(true);
  
     }

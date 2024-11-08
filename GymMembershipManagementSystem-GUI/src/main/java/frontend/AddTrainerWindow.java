@@ -17,7 +17,7 @@ public class AddTrainerWindow extends javax.swing.JFrame {
             return false;
         }
         
-        if(!Validator.isValidID(id))
+        if(!Validator.isValidID(id, 'T'))
         {
             JOptionPane.showMessageDialog(null, "Invalid ID", "Error", JOptionPane.ERROR_MESSAGE);
             return false;
@@ -47,6 +47,7 @@ public class AddTrainerWindow extends javax.swing.JFrame {
     public AddTrainerWindow(AdminRole admin) {
         this.admin = admin;
         initComponents();
+        setLocationRelativeTo(null);
         setVisible(true);
         
     }
@@ -69,7 +70,8 @@ public class AddTrainerWindow extends javax.swing.JFrame {
         SpecialityTextField = new javax.swing.JTextField();
         PhoneNumberTextField = new javax.swing.JTextField();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        setTitle("Add Trainer");
         setLocation(new java.awt.Point(500, 150));
 
         jPanel1.setBackground(new java.awt.Color(204, 204, 204));
@@ -232,7 +234,7 @@ public class AddTrainerWindow extends javax.swing.JFrame {
         String speciality = SpecialityTextField.getText();
         String phoneNumber = PhoneNumberTextField.getText();
         
-         boolean  flag = validateTrainer(trainerID, trainerName, email, speciality, phoneNumber);
+        boolean  flag = validateTrainer(trainerID, trainerName, email, speciality, phoneNumber);
         if(!flag)
             return;
         
